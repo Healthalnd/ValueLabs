@@ -14,20 +14,20 @@ public class GetResponse {
 		 RequestSpecification request = RestAssured.given();
 		 
 		 JSONObject requestParams = new JSONObject();
-		 requestParams.put("FirstName", "Virender"); // Cast
+		 requestParams.put("FirstName", "Sakthivel"); // Cast
 		 requestParams.put("LastName", "Singh");
 		 requestParams.put("UserName", "sdimpleuser2dd2011");
 		 requestParams.put("Password", "password1");
 		 
-		 requestParams.put("Email",  "sample2ee26d910@gmail.com");
+		 requestParams.put("Email",  "shakthivelit@gmail.com");
 		 request.body(requestParams.toString());
 		 Response response = request.post("/register");
 		 
 		 int statusCode = response.getStatusCode();
 		 System.out.println(statusCode);
 		 
-System.out.println(		 response.asString());
-		 Assert.assertEquals(statusCode, "201");
+		 System.out.println(response.asString());	
+		 Assert.assertEquals(statusCode, "200");
 		 
 		 String successCode = response.jsonPath().get("SuccessCode");
 		 Assert.assertEquals( "Correct Success code was returned", successCode, "OPERATION_SUCCESS");
