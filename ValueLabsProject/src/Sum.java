@@ -4,7 +4,7 @@ public class Sum {
 	
 	public static void main(String[] args) {
 		
-		int n = 198;
+		int n = 220;
 		
 		int sum =0, temp, remin;
 		temp=n;
